@@ -3,25 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat App</title>
+  <title>Colorful Chat App 💬</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="chat-container">
-    <h2>💬 My Chat App</h2>
-
-    <div class="input-section">
-      <input type="text" id="senderName" placeholder="Enter your name..." />
+  <div class="container">
+    <div class="login-screen" id="login-screen">
+      <h1>💬 Welcome to ColorChat</h1>
+      <input type="text" id="username" placeholder="Enter your name..." />
+      <button id="start-btn">Start Chat</button>
     </div>
 
-    <div id="messages"></div>
+    <div class="chat-screen hidden" id="chat-screen">
+      <header>
+        <h2 id="user-display"></h2>
+      </header>
 
-    <div class="input-section">
-      <input type="text" id="messageInput" placeholder="Type a message..." />
-      <button id="sendBtn">Send 🚀</button>
+      <div class="chat-box" id="chat-box"></div>
+
+      <div class="input-area">
+        <input type="text" id="msg-input" placeholder="Type a message..." />
+        <button id="send-btn">Send</button>
+      </div>
     </div>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
